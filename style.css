@@ -49,20 +49,39 @@ p {
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
+
 }
 
-.btn-1{
-    background-color:#f0f8ff ;
+.btn-1:hover {
+    background-color:#0088ff ;
+    animation: pulse 2s ease-in 0s infinite alternate both;
+    border-color:#add8e6 ;
     
 }
-.btn-2{
-    background-color: ;
+.btn-2:hover {
+    background-color: #810d81 ;
+    border-color: #d33adb;
+    animation: rotate 2s ease-in-out 0s infinite alternate both;
 
 }
-.btn-3{
-    background-color: ;
+.btn-3:hover {
+    background-color: #f31cfe ;
+    border-color: #ffb6c1;
+    animation: stretch 2s linear 0s infinite alternate both;
+}
+
+@keyframes pulse {
+    50%{transform: scale(2,2);}
+    100%{transform: scale(0.1,0.1);}
 
 }
 
+@keyframes rotate {
+    100%{transform: rotate(180deg);}
+}
+
+@keyframes stretch {
+    100%{transform: scaleY(2) skew(180deg);}
+}
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
