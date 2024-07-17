@@ -49,13 +49,16 @@ p {
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
+    animation: fade-in 1.5s ease-in-out 0.5s 1 forwards ;
 
 }
 
 .btn-1:hover {
     background-color:#0088ff ;
-    animation: pulse 2s ease-in 0s infinite alternate both;
+    animation: pulse 2s ease-in-out 0s infinite alternate both;
     border-color:#add8e6 ;
+    font-weight: 600;
+    transition: font-weight 1.5s ease-in 0s;
     
 }
 .btn-2:hover {
@@ -84,4 +87,8 @@ p {
     100%{transform: scaleY(2) skew(180deg);}
 }
 
-/* Add your custom styles for btn-1, btn-2, and btn-3 */
+@keyframes fade-in {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
